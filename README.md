@@ -1,4 +1,5 @@
-# notes-app (created by Sen, Karim and Will)
+# notes-app 
+(created by Sen, Karim and Will)
 ## Week 7 of Makers - front-end webapp for note taking
 ### User Stories
 ```
