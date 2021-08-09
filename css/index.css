@@ -1,0 +1,7 @@
+.createNote {
+    height: 699px;
+    width: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
