@@ -1,3 +1,3 @@
 document.addEventListener("DOMContentLoaded", () => {
-   const storeNote = new StoreNotes();
+    document.getElementById('note-body').style.height("690px");
 })
