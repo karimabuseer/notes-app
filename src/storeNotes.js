@@ -1,7 +1,10 @@
 class StoreNotes {
-  constructor(text) {
-    this.text = text;
-  }
+  constructor() {
+    this.notes = [];
+  };
 
+  createNote(text) {
+    this.notes.push(text);
+  }
 
 }
