@@ -27,3 +27,6 @@ So I can record notes with fun little pictures
 ```
 ### Usage
 (tbc)
+
+### Built with
+- Vanilla JS!

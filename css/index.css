@@ -67,4 +67,9 @@ h1 {
   align-items: flex-end;
   margin: 5px;
   margin-bottom: 120px;
+  color: rgb(1, 64, 160);
+}
+
+.submit1 { 
+  padding: 1rem;
 }
