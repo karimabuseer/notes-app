@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Noodle notes</title>
-  <script src="../src/interface.js"></script>
-  <script src="../src/storeNotes.js"></script>
-
-
+    <title>Noodle notes</title>
+    <script src="../src/interface.js"></script>
+    <script src="../src/storeNotes.js"></script>
+    <link rel="stylesheet" href='../css/index.css'></link>
   </head>
 
   <body>
-
-    <form id="create-note">
-      <input id="note-body" type="text" placeholder="Add your note :)"></input>
-      <input type="submit" value="Create note" name="submit"></input>
+    <form id="createNote" class="createNote"> 
+      <textarea rows=8 cols=30></textarea>
+      <br>
+      <div class="submit1">
+        <input type="submit" value="Create note" name="submit"></input>
+      </div>
     </form>
   </body>
 
