@@ -38,7 +38,7 @@ main {
   width: 70%;
   border-radius: 2rem;
   overflow: hidden;
-
+  z-index: 2;
 }
 
 .noteslist {
@@ -72,4 +72,19 @@ h1 {
 
 .submit1 { 
   padding: 1rem;
+}
+
+.shibu { 
+  position:  
+  z-index: 1;
+  background-image: url();
+}
+
+img {
+  opacity: 0.5;
+  height: 40rem;
+  width: 65rem;
+  position: absolute;
+  bottom: 5%;
+  right: 35%;
 }
