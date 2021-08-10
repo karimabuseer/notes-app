@@ -5,10 +5,10 @@
   }
 
 .createNote {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
 }
 
 main {
@@ -17,11 +17,12 @@ main {
   align-items: center;
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(to right top,rgba(64, 0, 128, 0.8),rgba(255, 102, 255, 0.6));
+  background: linear-gradient(to right top,rgba(7,28,45,255),rgba(7,28,45,255));
+  );
 
 }
 
-.form-container { 
+.create-note{ 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,14 +33,38 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 90vh;
-  background: linear-gradient(to right top, rgba(0, 0, 128, 0.8),rgba(153, 204, 255, 0.6));
+  min-height: 80vh;
+  background: linear-gradient(to right top, rgba(0, 0, 128, 0.7),rgba(153, 204, 255, 0.3));
   width: 70%;
   border-radius: 2rem;
+  overflow: hidden;
+
 }
 
-.submit1 { 
+.noteslist {
+  padding: 1rem;
+  min-height: 80vh;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  flex: 1;
+}
+
+
+.noteform { 
+  background: linear-gradient(
+    to right bottom,
+    rgba(255,255,255,0.7),
+    rgba(255,255,255,0.3)
+  );
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  min-height: 80vh;
+  justify-content: center;
+}
+
+h1 { 
+  display: flex;
+  align-items: flex-end;
+  margin: 5px;
+  margin-bottom: 120px;
 }
