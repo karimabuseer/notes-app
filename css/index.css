@@ -1,25 +1,45 @@
 * { 
-    margin: 25;
-    padding: 25;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
   }
 
 .createNote {
-  display: flex;
-  min-height: 100vh;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 100%;
+  align-items: center; */
 }
 
-html, body {
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
-  height: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to right top,rgba(64, 0, 128, 0.8),rgba(255, 102, 255, 0.6));
+
 }
 
 .form-container { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.notes { 
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  background: linear-gradient(to right top, rgba(0, 0, 128, 0.8),rgba(153, 204, 255, 0.6));
+  width: 70%;
+  border-radius: 2rem;
+}
+
+.submit1 { 
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
