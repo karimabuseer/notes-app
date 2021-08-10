@@ -4,13 +4,22 @@
     box-sizing: border-box;
   }
 
-.createNote { 
-  margin: auto;
-  width: fit-content;
-
+.createNote {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-.submit1 {
-  text-align: center;
+html, body {
+  margin: 0;
+  height: 100%;
 }
 
+.form-container { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
