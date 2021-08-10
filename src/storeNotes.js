@@ -1,10 +1,11 @@
 class StoreNotes {
-  constructor() {
-    this.notes = [];
+
+  createNote = (value) => {
+    let key = Date.now();
+    localStorage.setItem(key,value);
   };
 
-  createNote(text) {
-    this.notes.push(text);
-  }
+
+
 
 }

@@ -1,0 +1,10 @@
+class DisplayNotes {
+
+  displayAll = (element) => {
+
+  };
+
+
+
+
+}
