@@ -26,6 +26,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 4px 8px #0c052e;
 }
 
 
@@ -34,12 +35,13 @@ main {
   align-items: center;
   justify-content: center;
   min-height: 80vh;
-  background: linear-gradient(to right top, rgba(0, 0, 128, 0.7),rgba(153, 204, 255, 0.3));
+  background: linear-gradient(to right top, rgba(1, 1, 68, 0.7),rgba(153, 204, 255, 0.3));
   width: 70%;
   border-radius: 2rem;
   overflow: hidden;
   z-index: 2;
   position: absolute;
+  box-shadow: 2px 4px #050214;
 }
 
 .noteslist {
@@ -76,8 +78,21 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
+h2 { 
+  font-family: 'Staatliches', cursive; 
+  background: linear-gradient(
+    to right bottom,
+    rgba(255,255,255,0.7),
+    rgba(255,255,255,0.3)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .submit1 { 
-  padding: 1rem;
+  background-color: slateblue;
+  padding: 0.5rem;
+  border-radius: 2rem;
 }
 
 .shibu {   
@@ -104,4 +119,6 @@ img {
     rgba(255,255,255,0.7),
     rgba(255,255,255,0.3)
   );
+  box-shadow: 1px 2px #0c0629;
+
 }
