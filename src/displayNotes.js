@@ -15,10 +15,10 @@ class DisplayNotes {
     };
   };
 
-  selectNote(note) => {
-  }
+  selectNote = (note) => {
+    let item = location.hash.split("#")[1];
 
-
-
+    note.innerText = localStorage.getItem(item);
+  };
 
 };
