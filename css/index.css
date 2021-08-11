@@ -91,9 +91,19 @@ h2 {
 }
 
 .submit1 { 
-  background-color: slateblue;
+  background-color: rgb(42, 19, 192);
   padding: 0.5rem;
   border-radius: 2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 0px #0c0629;
+
+  
+}
+
+.submit1:hover {
+  background-color: rgb(10, 125, 240);
+  color :rgb(203, 238, 5);
+  box-shadow: 1px 2px #0c0629;
 }
 
 .shibu {   
@@ -112,7 +122,6 @@ img {
 
 .note { 
   color: white;
-  background-color: magenta;
   padding: 2rem;
   border-radius: 2rem;
   background: linear-gradient(
@@ -130,18 +139,39 @@ img {
     rgba(255,255,255,0.6),
     rgba(255,255,255,0.2)
   );
-  height: 8rem;
-  width: 8rem;
+  height: 0rem;
+  width: 0rem;
   position: absolute;
   border-radius: 50%;
   z-index: 2;
 }
 .circle1 { 
   top: 5%;
-  left: 10%;
+  left: 90%;
+}
+
+.circle1 img { 
+  width: 130px;
+  height: 120px;
+  border-radius: 50%;
+  animation: myanimation 5s;
 }
 
 .circle2{
   bottom: 5%;
   right: 10%;
 }
+
+
+
+  @keyframes myanimation
+{
+    0% {
+        left: 0;
+    }
+    10% {
+        left: 50%;
+    }
+    100% {
+        left: 10%;
+ 
