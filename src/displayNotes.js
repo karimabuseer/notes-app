@@ -15,8 +15,7 @@ class DisplayNotes {
     };
   };
 
-  selectNote(note) => {
-  }
+  //selectNote(note) => {}
 
 
 
