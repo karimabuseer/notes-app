@@ -26,4 +26,8 @@ I can use shortcodes like `:fire:` that get converted into emojis like 🔥
 So I can record notes with fun little pictures
 ```
 ### Usage
-(tbc)
+* Run index.html to access the webpage
+* Run SpecRunner.html to access testing suite
+
+### Built with
+- Vanilla JS!
