@@ -11,7 +11,7 @@ class DisplayNotes {
       } else {
         displayedNote = value.slice(0,19);
       }
-      note.innerHTML += `<a href="#${key}">${displayedNote}</a>`
+      return `<a href="#${key}">${displayedNote}</a>`
     };
   };
 

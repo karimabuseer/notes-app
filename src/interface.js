@@ -6,8 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   button.addEventListener("click", (event) => {
     event.preventDefault()
-    console.log(id="writing")
-    storeNotes.createNote
+    let userInput = document.getElementById("writing").value;
+    storeNotes.createNote(userInput);
+    let allNotes = displayNotes.displayAll();
+    for (displayNotes in ) //iterating for notes
+    document.getElementById("Juju").innerHTML = "Hi";
   });
   
 });
