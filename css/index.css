@@ -1,16 +1,177 @@
 * { 
-    margin: 25;
-    padding: 25;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
   }
 
-.createNote { 
-  margin: auto;
-  width: fit-content;
+.createNote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to right top,rgba(7,28,45,255),rgba(7,28,45,255));
+  );
 
 }
 
-.submit1 {
-  text-align: center;
+.create-note{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 8px #0c052e;
 }
 
+
+.notes { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background: linear-gradient(to right top, rgba(1, 1, 68, 0.7),rgba(153, 204, 255, 0.3));
+  width: 70%;
+  border-radius: 2rem;
+  overflow: hidden;
+  z-index: 3;
+  position: absolute;
+  box-shadow: 2px 4px #050214;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.noteslist {
+  padding: 1rem;
+  min-height: 80vh;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+
+.noteform { 
+  background: linear-gradient(
+    to right bottom,
+    rgba(255,255,255,0.7),
+    rgba(255,255,255,0.3)
+  );
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  min-height: 80vh;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Staatliches', cursive; 
+  display: flex;
+  align-items: flex-end;
+  margin: 10px;
+  margin-bottom: 120px;
+  background: linear-gradient(to right top, rgba(0, 0, 128, 0.7),rgba(153, 204, 255, 0.3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 { 
+  font-family: 'Staatliches', cursive; 
+  background: linear-gradient(
+    to right bottom,
+    rgba(255,255,255,0.7),
+    rgba(255,255,255,0.3)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.submit1 { 
+  background-color: rgb(42, 19, 192);
+  padding: 0.5rem;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 0px #0c0629;
+
+  
+}
+
+.submit1:hover {
+  background-color: rgb(10, 125, 240);
+  color :rgb(203, 238, 5);
+  box-shadow: 1px 2px #0c0629;
+}
+
+.shibu {   
+  z-index: 1;
+  background-image: url();
+}
+
+img {
+  opacity: 0.5;
+  height: 30rem;
+  width: 50rem;
+  position: relative;
+  top: -30%;
+  right: 40%;
+}
+
+.note { 
+  color: white;
+  padding: 2rem;
+  border-radius: 2rem;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255,255,255,0.7),
+    rgba(255,255,255,0.3)
+  );
+  box-shadow: 1px 2px #0c0629;
+}
+
+.circle1,.circle2  {
+  background-color: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255,255,255,0.6),
+    rgba(255,255,255,0.2)
+  );
+  height: 0rem;
+  width: 0rem;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 2;
+}
+.circle1 { 
+  top: 5%;
+  left: 90%;
+}
+
+.circle1 img { 
+  width: 130px;
+  height: 120px;
+  border-radius: 50%;
+  animation: myanimation 5s;
+}
+
+.circle2{
+  bottom: 5%;
+  right: 10%;
+}
+
+
+
+  @keyframes myanimation
+{
+    0% {
+        left: 0;
+    }
+    10% {
+        left: 50%;
+    }
+    100% {
+        left: 10%;
+ 
