@@ -26,6 +26,10 @@ const expect = (a) => {
 }
 
 ///tests
-it('2+2isnot5', () => {
- expect(2+2).toEqual(5);
-});
+// it('2+2isnot5', () => {
+//  expect(2+2).toEqual(5);
+// });
+//
+// it('2+2is4', () => {
+//  expect(2+2).toEqual(4);
+// });
