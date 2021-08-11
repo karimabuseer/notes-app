@@ -45,7 +45,7 @@ main {
   -webkit-backdrop-filter: saturate(180%) blur(20px);
 }
 
-.noteslist {
+.notesList {
   padding: 1rem;
   min-height: 80vh;
   display: flex;
