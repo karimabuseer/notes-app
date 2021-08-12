@@ -3,36 +3,32 @@ document.addEventListener("DOMContentLoaded", () => {
   let list = document.getElementById("notesList");
   const displayNotes = new DisplayNotes();
   const storeNotes = new StoreNotes();
-  updateDisplay();
+  loadNotes();
 
 
   button.addEventListener("click", (event) => {
     event.preventDefault()
-    let allNotes = displayNotes.displayAll();
     let userInput = document.getElementById("writing").value;
     storeNotes.createNote(userInput);
     newNote(userInput);
   });
-
-  function updateDisplay () {
-    console.log(localStorage)
-    for (let i = 0; i < localStorage.length; i++) {
-      const key = localStorage.key(i);
-      const value = localStorage.getItem(key);
-      const newDiv = document.createElement("div");
-      const dummyText = document.createTextNode(value);
-      newDiv.appendChild(dummyText);
-      newDiv.classList.add("note");
-      list.appendChild(newDiv);
-    }
-  }
+  
+  function newDiv (val) { 
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("note");
+    newDiv.innerHTML = val;
+    list.appendChild(newDiv);
+  };
 
   function newNote (userInput) { 
-    const newDiv = document.createElement("div");
-    const dummyText = document.createTextNode(userInput);
-    newDiv.appendChild(dummyText);
-    newDiv.classList.add("note");
-    list.appendChild(newDiv);
-  }
+    newDiv(userInput);
+  };
+
+  function loadNotes () { 
+    let allNotes = displayNotes.displayAll();
+    for (let i = 0; i < allNotes.length; i++) { 
+      newDiv(allNotes[i]);
+    }
+  };
   
 });

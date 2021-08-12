@@ -7,7 +7,6 @@ class DisplayNotes {
       const value = localStorage.getItem(key);
       let displayedNote;
       allNotes.push(`<a href="#${key}">${value}</a>`)
-      console.log(value)
     };
     return allNotes
   };
