@@ -9,8 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let userInput = document.getElementById("writing").value;
     storeNotes.createNote(userInput);
     let allNotes = displayNotes.displayAll();
-    for (displayNotes in ) //iterating for notes
-    document.getElementById("Juju").innerHTML = "Hi";
+    list.innerHTML = allNotes;
+    console.log(localStorage)
+    console.log(allNotes)
   });
   
 });
