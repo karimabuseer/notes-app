@@ -4,14 +4,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const displayNotes = new DisplayNotes();
   const storeNotes = new StoreNotes();
 
+
   button.addEventListener("click", (event) => {
     event.preventDefault()
     let userInput = document.getElementById("writing").value;
     storeNotes.createNote(userInput);
     let allNotes = displayNotes.displayAll();
-    list.innerHTML = allNotes;
-    console.log(localStorage)
-    console.log(allNotes)
+    const newDiv = document.createElement("div");
+    const dummyText = document.createTextNode("Test");
+    newDiv.appendChild(dummyText);
+    newDiv.classList.add("note");
+    const currentDiv = document.getElementById("last");
+    list.appendChild(newDiv);
+    
+    // list.innerHTML = allNotes;
   });
   
 });
