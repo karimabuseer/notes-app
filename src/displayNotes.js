@@ -24,5 +24,5 @@ class DisplayNotes {
     displayedNote = value.slice(0,19);
   }
  }
-
+ 
 };

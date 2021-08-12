@@ -12,13 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     storeNotes.createNote(userInput);
     newNote(userInput);
   });
-  
-  function newDiv (val) { 
-    const newDiv = document.createElement("div");
-    newDiv.classList.add("note");
-    newDiv.innerHTML = val;
-    list.appendChild(newDiv);
-  };
 
   function newNote (userInput) { 
     newDiv(userInput);
@@ -29,6 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let i = 0; i < allNotes.length; i++) { 
       newDiv(allNotes[i]);
     }
+  };
+
+  function newDiv (val) { 
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("note");
+    newDiv.innerHTML = val;
+    list.appendChild(newDiv);
   };
   
 });
