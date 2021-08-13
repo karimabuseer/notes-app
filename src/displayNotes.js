@@ -14,7 +14,7 @@ class DisplayNotes {
   selectNote = (note) => {
     let item = location.hash.split("#")[1];
 
-    note.innerText = localStorage.getItem(item);
+    return localStorage.getItem(item);
   };
 
   cutNotes = () => {

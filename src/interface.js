@@ -30,5 +30,19 @@ document.addEventListener("DOMContentLoaded", () => {
     newDiv.innerHTML = val;
     list.appendChild(newDiv);
   };
+
+  // Showing a single note
+  window.addEventListener("hashchange", () => {
+    console.log('Page has changed');
+    let key = window.location.hash.split("#")[1]
+    showSingleNote(displayNotes.selectNote(key))
+  });
+
+  function showSingleNote () {
+
+
+  }
+
+
   
 });
