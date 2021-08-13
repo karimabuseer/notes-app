@@ -1,27 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
   let button = document.getElementById("bigManButton");
   let list = document.getElementById("notesList");
+  let input = document.getElementById("writing")
   const displayNotes = new DisplayNotes();
   const storeNotes = new StoreNotes();
+  const emoji = new Emoji();
   loadNotes();
 
-
-  button.addEventListener("click", (event) => {
+  button.addEventListener('click', () => {
     event.preventDefault()
     let userInput = document.getElementById("writing").value;
-    storeNotes.createNote(userInput);
-    //newNote(userInput);
-    removeElementsByClass();
-    loadNotes();
+      emoji.convertEmoji(userInput)
+      .then(data => {
+        storeNotes.createNote(data);
+        location.reload();
+      });
   });
 
-  function newNote (userInput) { 
-    newDiv(userInput);
+  function newDiv (val) {
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("note");
+    newDiv.innerHTML = val;
+    list.appendChild(newDiv);
   };
 
-  function loadNotes () { 
+  function loadNotes () {
     let allNotes = displayNotes.displayAll();
-    for (let i = 0; i < allNotes.length; i++) { 
+    for (let i = 0; i < allNotes.length; i++) {
       newDiv(allNotes[i]);
     }
   };
@@ -32,13 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
         elements[0].parentNode.removeChild(elements[0]);
     }
 }
-
-  function newDiv (val) { 
-    const newDiv = document.createElement("div");
-    newDiv.classList.add("note");
-    newDiv.innerHTML = val;
-    list.appendChild(newDiv);
-  };
 
   // Showing a single note
   window.addEventListener("hashchange", () => {
@@ -64,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       button.hidden = false;
     });
 
-    deleteButton.addEventListener("click", () => { 
+    deleteButton.addEventListener("click", () => {
       storeNotes.deleteNote();
       removeElementsByClass();
       loadNotes();
@@ -76,5 +74,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  
 });
