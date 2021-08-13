@@ -99,7 +99,7 @@ h2 {
   -webkit-text-fill-color: transparent;
 }
 
-.submit1 { 
+.submit { 
   background-color: rgb(42, 19, 192);
   padding: 0.5rem;
   border-radius: 2rem;
@@ -183,4 +183,4 @@ img {
     }
     100% {
         left: 10%;
- 
+    }

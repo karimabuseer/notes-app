@@ -54,6 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("writing").hidden = false;
       button.hidden = false;
     });
+
+    deleteButton.addEventListener("click", () => { 
+      
+    })
   }
 
 
