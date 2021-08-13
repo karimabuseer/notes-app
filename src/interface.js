@@ -38,8 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
     showSingleNote(displayNotes.selectNote(key))
   });
 
-  function showSingleNote () {
-
+  function showSingleNote (longNote) {
+    document.getElementById("writing").hidden = true;
+    button.hidden = true;
+    const noteDiv =  document.getElementById("single-note");
+    noteDiv.hidden = false;
+    noteDiv.innerHTML = longNote;
 
   }
 
