@@ -1,34 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
   let button = document.getElementById("bigManButton");
   let list = document.getElementById("notesList");
+  let input = document.getElementById("writing")
   const displayNotes = new DisplayNotes();
   const storeNotes = new StoreNotes();
+  const emoji = new Emoji();
   loadNotes();
 
-
-  button.addEventListener("click", (event) => {
+  button.addEventListener('click', () => {
     event.preventDefault()
     let userInput = document.getElementById("writing").value;
-    storeNotes.createNote(userInput);
-    newNote(userInput);
+      emoji.convertEmoji(userInput)
+      .then(data => {
+        storeNotes.createNote(data);
+        location.reload();
+      });
   });
-  
-  function newDiv (val) { 
+
+  function newDiv (val) {
     const newDiv = document.createElement("div");
     newDiv.classList.add("note");
     newDiv.innerHTML = val;
     list.appendChild(newDiv);
   };
 
-  function newNote (userInput) { 
-    newDiv(userInput);
-  };
-
-  function loadNotes () { 
+  function loadNotes () {
     let allNotes = displayNotes.displayAll();
-    for (let i = 0; i < allNotes.length; i++) { 
+    for (let i = 0; i < allNotes.length; i++) {
       newDiv(allNotes[i]);
     }
   };
-  
+
 });
