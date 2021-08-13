@@ -11,7 +11,7 @@ class DisplayNotes {
     return allNotes
   };
 
-  selectNote = (note) => {
+  selectNote = (note) => {  
     let item = location.hash.split("#")[1];
 
     return localStorage.getItem(item);
