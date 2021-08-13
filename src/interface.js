@@ -56,7 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     deleteButton.addEventListener("click", () => { 
-      
+      storeNotes.deleteNote();
+      noteDivWrapper.hidden = true;
+      document.getElementById("writing").hidden = false;
+      button.hidden = false;
     })
   }
 
