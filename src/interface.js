@@ -41,11 +41,21 @@ document.addEventListener("DOMContentLoaded", () => {
   function showSingleNote (longNote) {
     document.getElementById("writing").hidden = true;
     button.hidden = true;
+    const noteDivWrapper =  document.getElementById("single-note-wrapper");
     const noteDiv =  document.getElementById("single-note");
-    noteDiv.hidden = false;
+    const backButton =  document.getElementById("back-to-notes");
+    const deleteButton =  document.getElementById("delete-note");
+    noteDivWrapper.hidden = false;
     noteDiv.innerHTML = longNote;
 
+    backButton.addEventListener("click", () => {
+      noteDiv.innerHTML = "";
+      noteDivWrapper.hidden = true;
+      document.getElementById("writing").hidden = false;
+      button.hidden = false;
+    });
   }
+
 
 
   
