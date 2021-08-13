@@ -29,6 +29,12 @@ main {
     box-shadow: 4px 8px #0c052e;
 }
 
+textarea { 
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
 
 .notes { 
   display: flex;
@@ -43,6 +49,7 @@ main {
   position: absolute;
   box-shadow: 2px 4px #050214;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
+
 }
 
 .notesList {
@@ -51,7 +58,9 @@ main {
   display: flex;
   flex: 1;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  overflow: auto;
+  height: 400px;
 }
 
 
@@ -73,7 +82,7 @@ h1 {
   display: flex;
   align-items: flex-end;
   margin: 10px;
-  margin-bottom: 120px;
+  margin-bottom: 60px;
   background: linear-gradient(to right top, rgba(0, 0, 128, 0.7),rgba(153, 204, 255, 0.3));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -90,7 +99,7 @@ h2 {
   -webkit-text-fill-color: transparent;
 }
 
-.submit1 { 
+.submit { 
   background-color: rgb(42, 19, 192);
   padding: 0.5rem;
   border-radius: 2rem;
@@ -162,6 +171,17 @@ img {
   right: 10%;
 }
 
+.full-note {  
+  color: white;
+  padding: 2rem;
+  border-radius: 2rem;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255,255,255,0.7),
+    rgba(255,255,255,0.3)
+  );
+  box-shadow: 1px 2px #0c0629;
+}
 
 
   @keyframes myanimation
@@ -174,4 +194,4 @@ img {
     }
     100% {
         left: 10%;
- 
+    }
