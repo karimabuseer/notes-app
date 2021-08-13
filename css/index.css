@@ -171,6 +171,17 @@ img {
   right: 10%;
 }
 
+.full-note {  
+  color: white;
+  padding: 2rem;
+  border-radius: 2rem;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255,255,255,0.7),
+    rgba(255,255,255,0.3)
+  );
+  box-shadow: 1px 2px #0c0629;
+}
 
 
   @keyframes myanimation

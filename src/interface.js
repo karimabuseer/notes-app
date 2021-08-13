@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault()
     let userInput = document.getElementById("writing").value;
     storeNotes.createNote(userInput);
-    newNote(userInput);
+    //newNote(userInput);
+    removeElementsByClass();
+    loadNotes();
   });
 
   function newNote (userInput) { 
@@ -23,6 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
       newDiv(allNotes[i]);
     }
   };
+
+  function removeElementsByClass () {
+    const elements = document.getElementsByClassName("note");
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+    }
+}
 
   function newDiv (val) { 
     const newDiv = document.createElement("div");
@@ -57,6 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     deleteButton.addEventListener("click", () => { 
       storeNotes.deleteNote();
+      removeElementsByClass();
+      loadNotes();
       noteDivWrapper.hidden = true;
       document.getElementById("writing").hidden = false;
       button.hidden = false;

@@ -4,8 +4,12 @@ class DisplayNotes {
     const allNotes = [];
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
-      const value = localStorage.getItem(key);
-      value = cutNotes(value);
+      let value = localStorage.getItem(key);
+      if (value.length <= 20) {
+        value = value;
+      } else {
+       value = value.slice(0,19);
+      }
       allNotes.push(`<a href="#${key}">${value}</a>`)
     };
     return allNotes
