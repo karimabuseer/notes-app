@@ -1,5 +1,7 @@
 # notes-app 
 (created by Sen, Karim and Will)
+
+The app is live! Try it on:  https://karimabuseer.github.io/notes-app/views/index.html
 ## Week 7 of Makers - front-end webapp for note taking
 ### User Stories
 ```

@@ -49,6 +49,7 @@ textarea {
   position: absolute;
   box-shadow: 2px 4px #050214;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
+  font-family: Arial, Helvetica, sans-serif
 
 }
 
